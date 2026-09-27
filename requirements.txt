@@ -1,0 +1,7 @@
+duckdb>=1.0
+pandas
+pyarrow
+python-calamine
+lightgbm
+scikit-learn
+pytest
