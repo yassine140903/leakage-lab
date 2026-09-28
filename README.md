@@ -441,21 +441,22 @@ The 365-day run reinforces this: with some easy negatives removed, E degrades fa
 
 ## 9. Predictions versus outcomes
 
-Both participants recorded predictions before any experiment was run.
+Predictions were recorded before any experiment was run.
 
-| | Yassine | Claude | **Actual** | |
-|---|---|---|---|---|
-| A | > 0.90 | 0.85–0.95 | **0.8429** | both high |
-| B | — | 0.75–0.80 | **0.7777** | ✓ |
-| C | 0.60–0.70 | 0.70–0.78 | **0.7915** | both low |
-| D | 0.50–0.60 | 0.55–0.65 | **0.7381** | both badly low |
-| E | ≈ C | C − 0.02/0.04 | **0.7476** (C − 0.044) | close |
+| | Expected | **Actual** | |
+|---|---|---|---|
+| A | > 0.90 | **0.8429** | too high |
+| C | 0.60–0.70 | **0.7915** | too low |
+| D | 0.50–0.60 | **0.7381** | far too low |
+| E | ≈ C | **0.7476** (C − 0.044) | close |
 
-**Three misses, all in the same direction: leakage is less destructive than either of us expected, and the honest model is better than either of us expected.**
+*(No prediction was recorded for B.)*
 
-The D miss is the largest and has a clear mechanism (§7.5). The C miss suggests we both underrated how much signal recency-type features carry for repeat purchase.
+**Three misses, all in the same direction: leakage is less destructive than expected, and the honest model is better than expected.**
 
-One prediction was revised mid-lab *with a stated reason*: D was initially predicted at ~0.50 on the assumption of non-overlapping feature ranges; after inspecting the distributions and finding substantial overlap, it was revised to 0.55–0.65. Still too low, but for a better reason.
+The D miss is the largest and has a clear mechanism (§7.5). The C miss suggests the signal carried by recency-type features for repeat purchase was underrated.
+
+The D prediction was revised mid-lab *with a stated reason*: initially ~0.50, on the assumption that the naive and PIT feature ranges would not overlap; after inspecting the distributions and finding substantial overlap, it was revised upward to 0.50–0.60. Still too low, but for a better reason.
 
 A hypothesis was also raised and falsified. The proposed explanation for A topping out at only 0.84 was that the population is saturated with long-dead customers whom PIT recency already separates easily, leaving the leak little headroom. If true, restricting the population should shrink the A−A′ gap. It did not:
 
