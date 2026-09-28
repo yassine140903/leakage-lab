@@ -519,13 +519,3 @@ python -m src.train       # experiments -> results.csv
 This is a reproducibility defect: the population should be a command-line flag or config value rather than an edited line, so both runs come from one command. Unfixed.
 
 ---
-
-## 13. Definition of done
-
-- [x] `pytest` green (9/9)
-- [x] Mutation check performed; one mutation caught by two tests, one shown to be inert for a principled reason
-- [x] Experiment table filled in, both populations
-- [x] Report answers the five required questions
-- [x] Can explain why D < A — and why D is much closer to A than expected (§7.5)
-- [ ] Reproducible from a single command (population requires a source edit — §12)
-- [ ] Feature importances re-run with `importance_type="gain"` (§6.2)
