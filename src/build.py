@@ -27,12 +27,12 @@ FROM generate_series(TIMESTAMP '2010-03-01',
                      TIMESTAMP '2011-11-01',
                      INTERVAL 1 MONTH);
 """
-
 ENTITIES = """
 CREATE OR REPLACE TABLE entities AS
 SELECT DISTINCT o.customer_id, c.cutoff
 FROM cutoffs c
-JOIN orders o ON o.invoice_ts < c.cutoff;
+JOIN orders o ON o.invoice_ts < c.cutoff
+             AND o.invoice_ts >= c.cutoff - INTERVAL 365 DAY;
 """
 
 LABELED = """
